@@ -7,6 +7,7 @@
 
 var buttonColor = [0,216,0,100]        // replace with [Red,Green,Blue,Opacity%] eg: [216,216,216,100]
 var cornerRadius = 8                       // replace with integer value.
+var padding  = 10 // the padding around the button. 
 
 function addLayerOfRectType(parent,rect) {
     var style = MSDefaultStyle.defaultStyle();
@@ -60,7 +61,7 @@ function getButtonDimensionsForLayer(layer){
   var offsetTop,offsetRight,offsetRight,offsetLeft;
   switch(splitLayer.length) {
     case 1: 
-      defVal = parseInt(splitLayer[0]) || 20;
+      defVal = parseInt(splitLayer[0]) || padding;
       layer.name = defVal + ':' + defVal;
       offsetTop = offsetBottom = offsetRight = offsetLeft = defVal;
       break;
